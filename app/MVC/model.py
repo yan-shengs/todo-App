@@ -17,6 +17,7 @@ class Datetip(Base):
     tipstatus = Column(Integer,default=0) # 默认未完成
     # 模型关系简化联表查询
     # dateuser = relationship("Dateuser") # 关联Bateuser对象 - Dateuser表 默认一对多
+    # dateuser = relationship("Dateuser") 待研究
 
     def to_dict(self):
         return {
@@ -36,8 +37,8 @@ class Dateuser(Base):
     # 防止数据库被爆
     tippassword = Column(String(50)) # 按理说应该加密储存但是小项目无伤大雅
     
-    datetip =  relationship("Datetip") # 关联Datetip对象 - Datetip表
-
+    # datetip =  relationship("Datetip") # 关联Datetip对象 - Datetip表 深入理解这个函数
+    # 待研究
     def to_dict(self):
         return {
             "tipuserid": self.tipuserid,
