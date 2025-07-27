@@ -1,0 +1,16 @@
+[project]
+name = "todoapp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "bcrypt>=4.3.0",
+    "flask>=3.0.3",
+    "flask-cors>=5.0.0",
+    "pyjwt>=2.9.0",
+    "sqlalchemy>=2.0.41",
+]
+
+[dependency-groups]
+dev = []
